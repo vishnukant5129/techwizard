@@ -85,19 +85,21 @@ const Footer = () => {
           {/* Contact Column */}
           <div>
             <h4 className="text-white font-bold mb-6 tracking-wider">Command_Center</h4>
-            {/* <div className="space-y-4">
+            <div className="space-y-4">
               <a
-                href=""
+                href="https://www.instagram.com/techwizard.aitd?igsh=MXBvZWYwcW52dzZ5MQ=="
                 className="flex items-center gap-2 text-gray-400 hover:text-cyan-400 transition-colors"
               >
-                <Instagram size={16} />
-                vishnukantray10
+                {/* <Instagram size={16} /> */}
+                Instagram
               </a>
-              <button className="flex items-center gap-2 text-gray-400 hover:text-pink-400 transition-colors">
-                <ExternalLink size={16} />
-                Admin_Login
-              </button>
-            </div> */}
+              <a href="https://chat.whatsapp.com/IN9NPJBWrwPKCCAKw1XELp?mode=gi_t">
+                <button className="flex items-center gap-2 text-gray-400 hover:text-pink-400 transition-colors">
+                  <ExternalLink size={16} />
+                  WhatsApp
+                </button>
+              </a>
+            </div>
 
             {/* System Logs */}
             <div className="mt-6 p-3 bg-black border border-green-500/30 rounded font-mono text-xs">
