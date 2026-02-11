@@ -10,7 +10,7 @@ import Footer from './sections/Footer';
 import StarBackground from './components/StarBackground';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
-import Workshop from "./sections/workshop";
+import Workshop from "./sections/Workshop.jsx";
 import Competition from './sections/Competition';
 import Robotics from './eventSpecs/robotics/Robotics.jsx';
 import Devfest from './eventSpecs/devfest/Devfest.jsx';
