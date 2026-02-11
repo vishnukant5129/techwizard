@@ -18,8 +18,7 @@ const EventsSection = ({ onNavigate }) => {
   // some changes 
   const events = useMemo(() => [
     {
-      category: 'Robotics',
-      title: 'Robo Obstacle Race',
+      title: 'Robotics Club',
       description: 'Build a wired or wireless robot to navigate a track with obstacles and finish in the shortest time.',
       prize: '₹20,000',
       icon: Route,
@@ -27,8 +26,7 @@ const EventsSection = ({ onNavigate }) => {
       href: 'robotics'
     },
     {
-      category: 'Codefest',
-      title: 'RC Flying',
+      title: 'Codefest Club',
       description: 'Pilot a remotely controlled fixed-wing aircraft through basic and precision maneuvers.',
       prize: '₹20,000',
       icon: Plane,
@@ -36,8 +34,7 @@ const EventsSection = ({ onNavigate }) => {
       href: 'codefest'
     },
     {
-      category: 'Biofest',
-      title: 'E-SPORTS',
+      title: 'biofest club',
       description: 'Competitive digital arena. Squad Mode (4 players). Mobile only.',
       prize: '₹20,000',
       icon: Gamepad2,
@@ -45,8 +42,7 @@ const EventsSection = ({ onNavigate }) => {
       href: 'biofest'
     },
     {
-      category: 'Devfest',
-      title: 'Robo War',
+      title: 'devfest club',
       description: 'Construct a wired or wireless combat robot to knockout or push the opponent out of the arena.',
       prize: '₹20,000',
       icon: Shield,
@@ -89,13 +85,16 @@ const EventsSection = ({ onNavigate }) => {
         </div>
 
         {/* Events Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div
+          // onClick={() => handleEventSpecs(event)}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {events.map((event, index) => (
-            <div
+            <button
               key={index}
               className="event-card rounded-lg overflow-hidden group cursor-pointer"
               onMouseEnter={() => setHoveredEvent(index)}
               onMouseLeave={() => setHoveredEvent(null)}
+              onClick={() => handleEventSpecs(event)}
             >
               {/* Card Header with Gradient */}
               <div className={`relative h-40 bg-gradient-to-br ${event.color} p-6`}>
@@ -103,13 +102,6 @@ const EventsSection = ({ onNavigate }) => {
                 <div className="absolute inset-0 opacity-20">
                   <div className="absolute top-4 right-4 w-20 h-20 border-2 border-white/30 rounded-full" />
                   <div className="absolute bottom-4 left-4 w-16 h-16 border-2 border-white/20 rounded-full" />
-                </div>
-
-                {/* Category Badge */}
-                <div className="absolute top-4 right-4">
-                  <span className="text-xs font-bold text-white/80 bg-black/30 px-2 py-1 rounded">
-                    [{event.category.toUpperCase()}]
-                  </span>
                 </div>
 
                 {/* Icon */}
@@ -123,27 +115,23 @@ const EventsSection = ({ onNavigate }) => {
               {/* Card Content */}
               <div className="p-6 bg-gradient-to-b from-gray-900 to-black">
                 <h4 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                  {event.title}
+                  {event.title.toUpperCase()}
                 </h4>
                 <p className="text-gray-400 text-sm mb-4 line-clamp-2">
                   {event.description}
                 </p>
 
                 {/* Prize & Action */}
-                <div className="flex items-center justify-between pt-4 border-t border-cyan-500/20">
-                  <div>
-                    <span className="text-cyan-400 font-bold">{event.prize}</span>
-                    <span className="text-gray-500 text-sm ml-1">Prize Pool</span>
-                  </div>
+                {/* <div className="flex items-center justify-between pt-4 border-t border-cyan-500/20">
                   <button
                     onClick={() => handleEventSpecs(event)}
                     className="flex items-center gap-1 text-xs text-gray-400 hover:text-cyan-400 transition-colors">
                     VIEW_SPECS
                     <ChevronRight size={14} className={`transition-transform ${hoveredEvent === index ? 'translate-x-1' : ''}`} />
                   </button>
-                </div>
+                </div> */}
               </div>
-            </div>
+            </button>
           ))}
         </div>
       </div>

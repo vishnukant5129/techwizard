@@ -126,7 +126,7 @@ const Footer = () => {
 
             <div>
               <p className="text-xs text-gray-600">
-                Designed by VishnuKant Ray
+                CREATED by VishnuKant Ray
               </p>
             </div>
           </div>

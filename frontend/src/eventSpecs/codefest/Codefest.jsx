@@ -6,7 +6,7 @@ const Codefest = ({ onNavigate }) => {
 
   return (
     <div className="min-h-screen bg-black text-white px-4 py-20 max-w-6xl mx-auto">
-      <button onClick={() => onNavigate("home")} className="text-cyan-400 mb-6">
+      <button onClick={() => onNavigate("events")} className="text-cyan-400 mb-6">
         ← Back to Home
       </button>
 
